@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FTD-MVP</string>
+
+    <string name="app_share_package">com.ftd.mvp</string>
+</resources>

@@ -1,0 +1,53 @@
+<resources>
+    
+
+    //去掉冷启动黑画的策略请关注我的另一个工程：https://github.com/xumingyi/CommonRemoveBlackPage
+    <!-- 主题基类 -->
+    <style name="AppCompatNoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        //状态栏颜色修改为透明，防止页面切换时出现怪异色透明效果看不出来，所有方案都必须使用
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 方案一.去掉黑屏白屏展示的方案 开始 -->
+    <style name="AppCommonWinDisPreviewTheme" parent="AppCompatNoActionBarTheme">
+        //不预览页面，点击icon会透明等待直到页面加载完直接展示
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <!-- 方案一.去掉黑屏白屏展示的方案 结束 -->
+
+
+
+    <!-- 方案二.去掉黑屏白屏展示的方案 开始 -->
+    <style name="AppCommonBgTheme" parent="AppCompatNoActionBarTheme">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@drawable/common_page_bg</item>
+    </style>
+    <!-- 方案二.去掉黑屏白屏展示的方案 结束 -->
+    
+    <!-- 方案三.去掉android黑屏白屏展示的方案 开始 -->
+    <!-- Application通用 主题 -->
+    <style name="AppCommonTheme" parent="AppCompatNoActionBarTheme">
+        <!--//启动动画背景色透明，不会透过桌面图标-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+    <!-- 启动的MainActivity背景透明、显示状态栏和导航栏 主题 -->
+    <style name="MainActivityTransTheme" parent="AppCompatNoActionBarTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>//是否有遮盖
+    </style>
+    
+    <!-- Splash活动或者广告页 主题 -->
+    <style name="SplashActivityTransTheme" parent="MainActivityTransTheme">
+        <item name="android:windowFullscreen">true</item>//全屏即无通知栏
+        <item name="android:windowIsTranslucent">true</item>
+        //启动动画为透明，这个是实现去掉黑白也的关键设置
+    </style>
+    <!-- 方案三.去掉黑屏白屏展示的方案 结束 -->
+
+</resources>
