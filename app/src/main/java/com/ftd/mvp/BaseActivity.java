@@ -71,19 +71,19 @@ public class BaseActivity extends AppCompatActivity{
                 ActivityCompat.requestPermissions(this, PermissionUtil.DynamicPermissions,
                         Constant.REQUEST_CODE_DYNAMICPERMISSIONS);
             }
-//            if (!Settings.System.canWrite(this)) {
-//                Logger.debug(mClassName, funName + "to requestWriteSettings");
-//                requestWriteSettings();
-//                return;
-//            }else{
-//                Logger.debug(mClassName, funName + "has WRITE_SETTINGS Permission");
-//            }
-//            //检查是否已经授予权限, 动态申请悬浮窗权限。
-//            if (!Settings.canDrawOverlays(this)) {
-//                //若未授权则请求权限
-//                getOverlayPermission();
-//                return;
-//            }
+            if (!Settings.System.canWrite(this)) {
+                Logger.debug(mClassName, funName + "to requestWriteSettings");
+                requestWriteSettings();
+                return;
+            }else{
+                Logger.debug(mClassName, funName + "has WRITE_SETTINGS Permission");
+            }
+            //检查是否已经授予权限, 动态申请悬浮窗权限。
+            if (!Settings.canDrawOverlays(this)) {
+                //若未授权则请求权限
+                getOverlayPermission();
+                return;
+            }
         }
     }
 
