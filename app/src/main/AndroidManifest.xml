@@ -32,7 +32,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppCommonBgTheme">
 
-        <activity android:name="com.ftd.mvp.MainActivity"
+        <activity android:name="com.ftd.mvp.View.activity.MainActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.ftd.mvp.SubActivity"
+        <activity android:name="com.ftd.mvp.View.SubActivity"
             android:launchMode="singleTop">
         </activity>
 

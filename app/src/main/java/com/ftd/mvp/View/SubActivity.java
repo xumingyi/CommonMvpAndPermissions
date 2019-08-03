@@ -1,7 +1,9 @@
-package com.ftd.mvp;
+package com.ftd.mvp.View;
 
 import android.content.Context;
 import android.os.Bundle;
+
+import com.ftd.mvp.R;
 
 public class SubActivity extends BaseActivity {
 
